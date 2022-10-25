@@ -14,12 +14,9 @@
    <!-- example of include  -->
 {% include 'navbar.html' %}
 
-<h1 class="fs-2 text text-center">This is a django app</h1>
-{%if Name %}
-<p class="fs-3 text text-center">{{msg}}</p>
-{%else%}
-<p class="fs-3 text text-center mb-5">Danjgo Rocks</p>
-{% endif %}
+<h1 class="fs-2 text text-center">Thought Of the day</h1>
+<p class="fs-3 text text-center">{{text}}</p>
+<p class="fs-3 text text-center mb-5">{{text2}}</p>
 <div class="row">
     <!-- card -->
 
@@ -31,7 +28,7 @@
           <h6 class="card-subtitle mb-2 text-muted">{{ele.age}}</h6>
           <p class="card-text">{{ele.College_Name}}</p>
           <p class="card-text">{{ele.email}}</p>        
-          <button class="btn text-start btn-info "><a class="nav-link" href="../update/{{ele.id}}">Update</a></button>
+          <button class="btn text-start btn-primary "><a class="nav-link" href="../update/{{ele.id}}">Update</a></button>
           <button class="btn text-end btn-danger"><a class="nav-link" href="../delete/{{ele.id}}">Delete</a></button>
 
         </div>

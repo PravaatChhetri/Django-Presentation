@@ -2,6 +2,7 @@ from http.client import HTTPResponse
 from multiprocessing import context
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django_Learner.apps import apiCall
 
 from django_Learner.forms import StudentForm
 from .models import Info
@@ -13,8 +14,11 @@ from django import forms
 
 def hello(request):
     obj=Info.objects.all()
+    text=apiCall()
 
-    return render(request,"index.html",{'obj':obj})
+    print(text)
+
+    return render(request,"index.html",{'obj':obj,'text':text[0],'text2':text[1]})
 
 # def addS(request):
 #     if request.method=="POST":
